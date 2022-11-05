@@ -48,6 +48,10 @@
     margin-left: 12px;
 }
 
+.searchIconContainer:hover {
+    animation: search ease 500ms;
+}
+
 .input:focus {
     border: 4px solid rgb(41, 207, 152);
     border-right: 2px solid rgb(41, 207, 152);
@@ -60,8 +64,26 @@
 }
 
 .bi-search:hover {
-    font-size: 28px;
+    font-size: 36px;
     cursor: pointer;
+}
+
+@keyframes search {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(15deg)
+    }
+
+    50% {
+        transform: rotate(-15deg)
+    }
+
+    100% {
+        transform: rotate(0deg)
+    }
 }
 
 .sliderContainer {

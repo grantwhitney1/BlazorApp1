@@ -1,0 +1,16 @@
+﻿@font-face {
+    font-family: siteFont;
+    src: url('../fonts/SegUIVar.ttf') format('truetype');
+    font-weight: 100;
+}
+
+* {
+    font-family: siteFont;
+    margin: 0;
+    font-size: 22px;
+    transition: all 250ms ease;
+}
+
+body {
+    margin: 0;
+}

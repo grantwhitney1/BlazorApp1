@@ -1,0 +1,119 @@
+.page {
+    background-image: linear-gradient(45deg, lightgrey, white);
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+/* TOP BAR */
+
+.topBar {
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+}
+
+.topBarItem {
+    padding: 8px 16px 8px 16px;
+    margin: 12px 0 12px 12px;
+    background-color: rgba(0, 0, 0, 0);
+    border-radius: 32px;
+    cursor: pointer;
+    transition: all 250ms ease;
+}
+
+.topBarItem:hover {
+    background-color: rgba(0, 0, 0, 0.125);
+}
+
+.gearIcon {
+    margin: auto 12px auto 0;
+    background-color: rgba(0, 0, 0, 0);
+    border-radius: 32px;
+    cursor: pointer;
+    transition: all 250ms ease;
+    position: relative;
+}
+
+.bi-gear-fill {
+    display: none;
+}
+
+.gearIcon:hover > .bi-gear {
+    display:none;
+}
+
+.gearIcon:hover > .bi-gear-fill {
+    display:block;
+}
+
+.gearIcon:hover {
+    transform: rotate(90deg)
+}
+
+.mailboxIcon {
+    margin: auto 12px auto 0;
+    background-color: rgba(0, 0, 0, 0);
+    border-radius: 32px;
+    cursor: pointer;
+    transition: all 250ms ease;
+    position: relative;
+}
+
+.bi-mailbox2, .bi-bell-fill {
+    display: none;
+}
+
+.mailboxIcon:hover > .bi-mailbox, .mailboxIcon:hover > .bi-bell {
+    display: none;
+}
+
+.mailboxIcon:hover > .bi-mailbox2, .mailboxIcon:hover > .bi-bell-fill {
+    display: block;
+}
+
+.mailboxIcon:hover {
+    animation: mailbox ease 500ms;
+}
+
+@keyframes mailbox {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(15deg)
+    }
+    50% {
+        transform: rotate(-15deg)
+    }
+    100% {
+        transform: rotate(0deg)
+    }
+}
+
+.topBarLeft {
+    display:flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.topBarRight {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-left: auto;
+}
+
+.userIcon {
+    padding: 6px 6px 6px 6px;
+    margin: 12px 12px 12px 0;
+    background-color: rgb(250, 209, 223);
+    border: 2px solid rgb(225, 180, 200);
+    border-radius: 32px;
+    cursor: pointer;
+    transition: all 250ms ease;
+}
+
+.userIcon:hover {
+    filter: brightness(.7)
+}

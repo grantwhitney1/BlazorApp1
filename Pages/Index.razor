@@ -1,0 +1,30 @@
+﻿@page "/"
+
+<PageTitle>Index</PageTitle>
+
+<div class="content">
+    <div class="prompt">
+        Looking for a new roommate or renter?<br/>
+        Enter your address, city, or ZIP code
+    </div>
+    <div class="inputContainer">
+        <input class="input" />
+        <select class="dropdown">
+            <option>Address</option>
+            <option>City</option>
+            <option>ZIP Code</option>
+        </select>
+        <div class="searchIconContainer">
+            <i class="bi bi-search"></i>
+        </div>
+    </div>
+    <div class="sliderContainer">
+        within
+        <input type="range" min="1" max="200" @bind-value="@mile" @bind-value:event="oninput" class="slider" />
+        @mile mi
+    </div>
+</div>
+
+@code {
+    private int mile { get; set; } = 1;
+}

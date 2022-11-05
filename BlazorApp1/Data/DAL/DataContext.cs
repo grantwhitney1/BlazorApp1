@@ -7,9 +7,11 @@ namespace BlazorApp1.Data.DAL
     {
         public DbSet<Tenant>? Tenants { get; set; }
 
-        public string DbPath { get; } = "(localdb)\\mssqllocaldb";
+        //local: "(localdb)\\mssqllocaldb"
+        public string DbPath { get; } = "h1use0ulyws4lqr1.cbetxkdyhwsb.us-east-1.rds.amazonaws.com";
 
         protected override void OnConfiguring(DbContextOptionsBuilder options)
-            => options.UseSqlServer($"Data Source={DbPath}");
+            => options.UseMySql(connectionString: @"server=h1use0ulyws4lqr1.cbetxkdyhwsb.us-east-1.rds.amazonaws.com;port=3306;database=ufeod924dcfkuvyf;uid=y5otpv72mfiikjie;password=uf8mtryxwbusd4is;",
+            new MySqlServerVersion(new Version(8, 0, 0)));
     }
 }
